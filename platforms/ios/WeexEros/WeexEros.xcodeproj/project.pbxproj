@@ -144,9 +144,6 @@
 						DevelopmentTeam = 5GU5M8KY42;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
-							com.apple.AccessWiFi = {
-								enabled = 1;
-							};
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
@@ -392,7 +389,7 @@
 				INFOPLIST_FILE = WeexEros/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -483,7 +480,7 @@
 				INFOPLIST_FILE = WeexEros/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -572,7 +569,7 @@
 				9737F9FE1F384AFD00000800 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
+			defaultConfigurationName = Release;
 		};
 		9737F9FF1F384AFD00000800 /* Build configuration list for PBXNativeTarget "WeexEros" */ = {
 			isa = XCConfigurationList;
@@ -581,7 +578,7 @@
 				9737FA011F384AFD00000800 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -2,7 +2,7 @@
 @Author: hopkinson
 @Date:   2018-04-06T11:13:42+08:00
 @Last modified by:   hopkinson
-@Last modified time: 2018-11-25T22:20:00+08:00
+@Last modified time: 2018-11-27T12:48:46+08:00
 -->
 
 
@@ -141,9 +141,11 @@ export default {
         },
         beforeBackAppear(params) {
             if (Object.keys(params).length !== 0) {
-                // 1.货品信息， 车型选择
+                // 货品信息 车型选择
                 if (['product.detail', 'car.choose'].includes(params.fromType)) {
-                    this.Form = Object.assign({}, this.Form, params)
+                    this.Form = Object.assign({}, this.Form, params, {
+                        preCarType: params.carType
+                    })
                 }
                 // 2.起点选择
                 if (params.fromType.includes('start')) {
@@ -214,7 +216,10 @@ export default {
             this.$fetch({
                 method: 'POST',
                 name: 'u/order/create',
-                data: this.Form
+                data: {
+                    ...this.Form,
+                    goodsPhoto: this.Form.goodsPhoto.join(',')
+                }
             }).then(data => {
                 this.Show.dialog = true
                 this.Data.detail = data
